@@ -2,19 +2,62 @@
 <templates>
   <blocks>
     <block type="text" id="cardTitle">
-      <location x="45" y="25" />
+      <location x="25" y="25" />
       <text color="#000000" size="25" />
       <border color="#FFFFFF" size="3" />
-      <wordwrap height="180" width="350" shrinktofit="False" />
+      <wordwrap height="50" width="300" shrinktofit="True" />
+    </block>
+    <block type="text" id="cardMP">
+      <location x="325" y="25" />
+      <text color="#000000" size="50" />
+      <border color="#FFFFFF" size="3" />
+    </block>
+    <block type="text" id="cardType">
+      <location x="25" y="75" />
+      <text color="#000000" size="25" />
+      <border color="#FFFFFF" size="3" />
+    </block>
+    <block type="text" id="cardTrait">
+      <location x="25" y="100" />
+      <text color="#000000" size="25" />
+      <border color="#FFFFFF" size="3" />
+    </block>
+    <block type="text" id="cardStrength">
+      <location x="325" y="375" />
+      <text color="#FF0000" size="50" />
+      <border color="#FFFFFF" size="3" />
+    </block>
+    <block type="text" id="cardIntelligence">
+      <location x="325" y="425" />
+      <text color="#0000FF" size="50" />
+      <border color="#FFFFFF" size="3" />
+    </block>
+    <block type="text" id="cardSpecial">
+      <location x="325" y="475" />
+      <text color="#00FF00" size="50" />
+      <border color="#FFFFFF" size="3" />
+    </block>
+    <block type="text" id="cardText">
+      <location x="25" y="375" />
+      <text color="#000000" size="25" />
+      <border color="#FFFFFF" size="3" />
+      <wordwrap height="175" width="300" shrinktofit="True" />
     </block>
  </blocks>
 
-  <template src="cards/front.png" default="True">
+  <template src="cards/metax-blank.png" default="True">
     <matches>
       <match name="Color" value="Red" />
     </matches>
     <textblocks>
       <link block="cardTitle"><property name="Name" /></link>
+      <link block="cardType"><property name="Type" /></link>
+      <link block="cardMP"><property name="MP" /></link>
+      <link block="cardTrait"><property name="Trait" /></link>
+      <link block="cardStrength"><property name="Strength" /></link>
+      <link block="cardIntelligence"><property name="Intelligence" /></link>
+      <link block="cardSpecial"><property name="Special" /></link>
+      <link block="cardText"><property name="Text" /></link>
     </textblocks>
 	</template> 
 </templates>
